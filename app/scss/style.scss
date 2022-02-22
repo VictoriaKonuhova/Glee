@@ -7,11 +7,6 @@
 .header {
   padding: 60px 0 45px;
   background-color: #fff;
-  &__container {
-    max-width: 1770px;
-    margin: 0 auto;
-    padding: 0 75px;
-  }
   &__inner {
     display: flex;
     align-items: center;
@@ -56,6 +51,11 @@
   &__link {
     border-radius: 50%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57px;
+    height: 57px;
   }
   &__search {
     background-color: #a3bbc842;
@@ -63,7 +63,7 @@
   }
   &__search-img,
   &__menu-img {
-    padding: 18px;
+    object-fit: cover;
   }
   &__heart {
     border-right: 2px solid #f7e5d5;
@@ -72,7 +72,7 @@
   }
   &__heart-img,
   &__box-img {
-    padding: 18px 25px;
+    object-fit: cover;
   }
   &__items {
     display: flex;
@@ -93,7 +93,7 @@
     color: $accent;
     text-align: center;
     bottom: 26px;
-    right: 10px;
+    right: 4px;
     font-size: 12px;
     line-height: 20px;
     @extend %dmsans-700;
@@ -180,11 +180,22 @@
 }
 
 .top-slider {
-  margin: 0 75px;
-  background-image: url("../images/slider/top-slider-bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  &__inner {
+    background-image: url("../images/slider/top-slider-bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__item {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__img {
+    object-fit: contain;
+  }
   &__title {
     @extend %rubik-500;
     text-transform: uppercase;
@@ -239,10 +250,69 @@
       cursor: pointer;
     }
     &.slick-active {
-      button{
+      button {
         opacity: 1;
       }
     }
   }
 }
+.service {
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+  &__item {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(2) {
+      border-left: 3px solid #e8e4df;
+      border-right: 3px solid #e8e4df;
+    }
+  }
+
+  &__content {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      background-repeat: no-repeat;
+      left: -70px;
+    }
+    &:nth-child(1)::before {
+      background-image: url("../images/icons/support.svg");
+    }
+    &:nth-child(2)::before {
+      background-image: url("../images/icons/delivery.svg");
+    }
+    &:nth-child(3)::before {
+      background-image: url("../images/icons/pay.svg");
+    }
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 28px;
+    color: #414141;
+    @extend %dmsans-700;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    color: #585858;
+    @extend %dmsans-400;
+    max-width: 200px;
+  }
+}
+
+
 @import "media";
