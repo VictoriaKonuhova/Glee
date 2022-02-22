@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -98,62 +99,62 @@
     @extend %dmsans-700;
   }
 }
-.footer{
+.footer {
   padding: 70px 0 40px;
   background-color: #fff;
 }
-.footer-top{
+.footer-top {
   display: flex;
   justify-content: space-between;
   padding-bottom: 80px;
   border-bottom: 1px solid #dae4e9;
-  &__contact{
+  &__contact {
     max-width: 200px;
     margin-right: 100px;
   }
   &__adress,
-  &__phone{
+  &__phone {
     margin-bottom: 10px;
     display: block;
     line-height: 18px;
   }
-  &__logo{
+  &__logo {
     margin-bottom: 20px;
   }
-  &__title{
+  &__title {
     font-size: 18px;
     line-height: 3;
     margin-bottom: 19px;
     color: $accent;
     @extend %dmsans-700;
   }
-  &__items{
+  &__items {
     max-width: 170px;
     margin-right: 130px;
   }
-  &__list{
+  &__list {
     margin-bottom: 10px;
     line-height: 18px;
   }
-  &__form{
+  &__form {
     max-width: 270px;
   }
-  &__text{
+  &__text {
     margin-bottom: 25px;
   }
-  &__form-input{
+  &__form-input {
     max-width: 170px;
     width: 100%;
     background-color: $bg;
     border: none;
     padding: 12px 70px 12px 15px;
-    &::placeholder{
+    &::placeholder {
       color: $accent;
       font-size: 12px;
       @extend %dmsans-700;
     }
   }
-  &__form-btn{
+  &__form-btn {
     color: #fff;
     background-color: #91bfd8ed;
     border: none;
@@ -162,20 +163,86 @@
     margin-left: -4px;
   }
 }
-.footer-bottom{
+.footer-bottom {
   padding-top: 36px;
   display: flex;
   justify-content: space-between;
-  &__items{
+  &__items {
     display: flex;
   }
-  &__item{
+  &__item {
     padding: 0 15px;
     line-height: 14px;
   }
-  &__item + .footer-bottom__item{
+  &__item + .footer-bottom__item {
     border-left: 2px solid $default;
   }
 }
 
+.top-slider {
+  margin: 0 75px;
+  background-image: url("../images/slider/top-slider-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__title {
+    @extend %rubik-500;
+    text-transform: uppercase;
+    font-size: 72px;
+    line-height: 82px;
+    color: #243f4d;
+    padding: 215px 0 30px;
+    max-width: 420px;
+  }
+  &__text {
+    color: $accent;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 365px;
+  }
+  &__button {
+    padding: 40px 0 200px;
+    max-width: 200px;
+  }
+  &__link {
+    color: #fff;
+    padding: 24px 100px 20px 26px;
+    background-color: #a3bbc8;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icons/arrow.svg");
+      width: 22px;
+      height: 9px;
+      right: 20px;
+      bottom: 25px;
+    }
+  }
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  li {
+    padding: 0 12px;
+    button {
+      @extend %rubik-500;
+      color: #243f4d;
+      font-size: 12px;
+      line-height: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.302;
+      border: #fff;
+      padding: 12px 12px;
+      cursor: pointer;
+    }
+    &.slick-active {
+      button{
+        opacity: 1;
+      }
+    }
+  }
+}
 @import "media";
