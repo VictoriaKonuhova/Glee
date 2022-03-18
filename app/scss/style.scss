@@ -384,7 +384,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 40px;
     grid-column-gap: 30px;
-    padding: 80px 0 80px;
+    padding: 80px 0;
   }
 }
 
@@ -470,6 +470,32 @@
       right: 20px;
       top: 25px;
     }
+  }
+}
+
+.products-new{
+  &__content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 20px 0 120px;
+  }
+  &__item{
+    display: block;
+    width: 370px;
+    height: 243px;
+  }
+  &__item-about{
+    padding: 35px 0 0 40px;
+    max-width: 190px;
+  }
+  &__item-title{
+    color: $title;
+    @extend %dmsans-700;
+    font-size: 20px;
+  }
+  &__item-style{
+    color: #a3bbc8;
   }
 }
 
