@@ -43,3 +43,29 @@ a {
   line-height: 24px;
   @extend %rubik-400;
 }
+
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    padding-right: 20px;
+    color: #979ba0;
+    position: relative;
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 10px;
+      bottom: -1px;
+      font-size: 18px;
+    }
+    &:last-child{
+      padding: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
