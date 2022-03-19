@@ -24,4 +24,5 @@ document.querySelectorAll('.products-menu__list-link').forEach(el => {
     document.getElementById(id).classList.add('products-week__content--active')
   })
 });
-document.querySelector('.products-menu__list-link').click();
+document.querySelector('.products-menu__list-link').click()
+});
