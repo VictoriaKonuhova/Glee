@@ -637,4 +637,76 @@
   }
 }
 
+.clients--no-articles{
+  margin-top: 0;
+  padding: 90px 0;
+}
+
+.login{
+  padding: 120px 0;
+  max-width: 470px;
+  margin: 0 auto;
+  &__label{
+    display: block;
+    margin-bottom: 30px;
+    color: $accent;
+    font-size: 18px;
+  }
+  &__input{
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 1px solid $default;
+    background-color: transparent;
+  }
+  &__btn{
+    margin-bottom: 35px;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    background-color: #a3bbc8;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: none;
+    @extend %rubik-500;
+    cursor: pointer;
+  }
+  &__checkbox{
+    cursor: pointer;
+  }
+  &__form-box{
+    padding-bottom: 30px;
+    border-bottom: 3px solid #f6f6f6;
+  }
+  &__error{
+    color: $accent;
+    font-size: 18px;
+  }
+  &__form-box{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__create{
+    text-align: center;
+    color: $accent;
+    font-size: 18px;
+  }
+  &__create-text{
+    display: block;
+    margin: 35px 0 25px;
+  }
+  &__create-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #243f4d;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    height: 60px;
+    border: 3px solid #a3bbc8;
+  }
+}
+
 @import "media";

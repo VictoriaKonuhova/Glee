@@ -82,67 +82,42 @@
         </div>
       </div>
     </section>
-    <section class="articles">
+    <section class="login">
       <div class="container">
-        <div class="articles__box-title">
-          <h2 class="title articles__title">
-            Our Insights & Articles
-          </h2>
-          <a class="articles__link" href="#">View all</a>
-        </div>
-        <div class="articles__inner">
-          <div class="articles__item">
-            <img class="articles__item-img" src="images/articles/1.jpg" alt="">
-            <div class="articles__item-box">
-              <p class="articles__item-text">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </p>
-              <div class="articles__item-info">
-                <span class="articles__item-date">
-                  20 JANUARY, 2020
-                </span>
-                <a class="articles__item-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
+        <form class="login__form" action="#">
+          <label class="login__label">
+            Username or email address *
+            <input class="login__input" type="text" required>
+          </label>
+          <label class="login__label">
+            Password *
+            <input class="login__input" type="password" required>
+          </label>
+          <button class="login__btn" type="submit">
+            Login
+          </button>
+          <div class="login__form-box">
+            <label class="login__label">
+            <input class="login__checkbox" type="checkbox">
+            Remember me
+          </label>
+          <a class="login__error" href="#">
+            Lost your password?
+          </a>
           </div>
-          <div class="articles__item">
-            <img class="articles__item-img" src="images/articles/2.jpg" alt="">
-            <div class="articles__item-box">
-              <p class="articles__item-text">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </p>
-              <div class="articles__item-info">
-                <span class="articles__item-date">
-                  28 JANUARY, 2020
-                </span>
-                <a class="articles__item-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="articles__item">
-            <img class="articles__item-img" src="images/articles/2.jpg" alt="">
-            <div class="articles__item-box">
-              <p class="articles__item-text">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </p>
-              <div class="articles__item-info">
-                <span class="articles__item-date">
-                  15 JANUARY, 2020
-                </span>
-                <a class="articles__item-author" href="#">
-                  BY ADMIN
-                </a>
-              </div>
-            </div>
-          </div>
+        </form>
+        <div class="login__create">
+          <span class="login__create-text">
+            Not registered? No problem
+          </span>
+          <a class="login__create-link" href="#">
+            Create an account
+          </a>
         </div>
       </div>
     </section>
-    <section class="clients">
+    
+    <section class="clients clients--no-articles">
       <div class="container">
         <div class="clients__inner">
           <img class="clients__inner-img" src="images/clients/1.png" alt="client">
