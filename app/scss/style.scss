@@ -955,4 +955,127 @@
   }
 }
 
+.contact {
+  padding-top: 120px;
+  &__title {
+    color: $accent;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    column-gap: 20px;
+    margin-bottom: 120px;
+  }
+  &__info-list {
+    width: 370px;
+    background-color: #fbfbfb;
+    border: 3px solid transparent;
+    padding: 70px 0;
+    transition: all 0.3s;
+    &:hover {
+      border-color: $accent;
+      .contact__info-img {
+        background-color: #a3bbc8;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__info-img {
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 65px;
+  }
+  &__info-title {
+    @extend %dmsans-700;
+    font-size: 20px;
+    color: $title;
+    margin-bottom: 25px;
+  }
+  &__info-text {
+    font-size: 16px;
+    line-height: 30px;
+    span {
+      display: block;
+    }
+  }
+  &__info-phone {
+    display: block;
+    font-size: inherit;
+  }
+  &__connection {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    max-width: 625px;
+    width: 100%;
+    margin-right: 45px;
+  }
+  &__form-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+  &__form-input,
+  &__form-textarea {
+    width: 100%;
+    border: none;
+    background-color: #fafafa;
+    padding: 20px;
+    text-transform: uppercase;
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  &__form-input {
+    max-width: 300px;
+    height: 50px;
+    background-position-x: 240px;
+    background-position-y: 20px;
+  }
+  &__form-input--name {
+    background-image: url("../images/icons/user-form.svg");
+  }
+  &__form-input--email {
+    background-image: url("../images/icons/email-form.svg");
+  }
+  &__form-textarea {
+    resize: none;
+    margin-bottom: 30px;
+    height: 170px;
+    background-image: url("../images/icons/message-form.svg");
+    background-position-x: 535px;
+    background-position-y: 15px;
+  }
+  &__form-btn {
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+#map {
+  width: 515px;
+  height: 335px;
+}
+
 @import "media";
