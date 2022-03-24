@@ -5,8 +5,8 @@ body {
 
 body {
   color: $default;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 30px;
   @extend %rubik-400;
   display: flex;
   flex-direction: column;
@@ -39,8 +39,8 @@ body {
 
 a {
   color: $default;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 30px;
   @extend %rubik-400;
 }
 

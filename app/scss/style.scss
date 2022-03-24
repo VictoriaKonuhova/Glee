@@ -123,6 +123,33 @@
 .footer {
   padding: 70px 0 40px;
   background-color: #fff;
+  &__form {
+    max-width: 270px;
+    display: flex;
+    margin-left: auto;
+    margin-top: 15px;
+  }
+  &__form-input {
+    max-width: 170px;
+    width: 100%;
+    background-color: #fcd7b647;
+    border: none;
+    padding: 12px 70px 12px 15px;
+    &::placeholder {
+      color: $accent;
+      font-size: 12px;
+      @extend %dmsans-700;
+    }
+  }
+  &__form-btn {
+    display: block;
+    color: #fff;
+    background-color: #91bfd8ed;
+    border: none;
+    max-width: 100px;
+    padding: 12px 16px;
+    margin-left: -4px;
+  }
 }
 .footer-top {
   display: flex;
@@ -157,31 +184,8 @@
     margin-bottom: 10px;
     line-height: 18px;
   }
-  &__form {
-    max-width: 270px;
-  }
   &__text {
     margin-bottom: 25px;
-  }
-  &__form-input {
-    max-width: 170px;
-    width: 100%;
-    background-color: #fcd7b647;
-    border: none;
-    padding: 12px 70px 12px 15px;
-    &::placeholder {
-      color: $accent;
-      font-size: 12px;
-      @extend %dmsans-700;
-    }
-  }
-  &__form-btn {
-    color: #fff;
-    background-color: #91bfd8ed;
-    border: none;
-    max-width: 100px;
-    padding: 12px 16px;
-    margin-left: -4px;
   }
 }
 .footer-bottom {
@@ -220,7 +224,7 @@
     text-transform: uppercase;
     font-size: 72px;
     line-height: 82px;
-    color: #243f4d;
+    color: $accent2;
     margin-bottom: 30px;
     max-width: 420px;
   }
@@ -258,7 +262,7 @@
     padding: 0 12px;
     button {
       @extend %rubik-500;
-      color: #243f4d;
+      color: $accent2;
       font-size: 12px;
       line-height: 8px;
       border-radius: 50%;
@@ -325,8 +329,6 @@
     @extend %dmsans-700;
   }
   &__text {
-    font-size: 16px;
-    line-height: 26px;
     color: #585858;
     @extend %dmsans-400;
     max-width: 200px;
@@ -372,16 +374,12 @@
   &__item-name {
     text-align: center;
     @extend %rubik-500;
-    color: #243f4d;
-    font-size: 16px;
-    line-height: 28px;
+    color: $accent2;
     margin: 50px 0 10px;
   }
   &__item-price {
     text-align: center;
     @extend %dmsans-700;
-    font-size: 16px;
-    line-height: 26px;
     color: #a3bbc8;
   }
   &__buy {
@@ -415,8 +413,6 @@
   }
   &__list-link {
     color: $default;
-    font-size: 16px;
-    line-height: 26px;
     @extend %dmsans-700;
   }
   &__list-item + .products-menu__list-item {
@@ -460,7 +456,7 @@
   }
   &__item-about {
     width: 340px;
-    color: #243f4d;
+    color: $accent2;
   }
   &__item-title {
     font-size: 26px;
@@ -468,7 +464,6 @@
     margin-bottom: 25px;
   }
   &__item-text {
-    font-size: 16px;
     margin-bottom: 30px;
   }
   &__item-link {
@@ -476,8 +471,8 @@
     color: $accent;
     @extend %rubik-500;
     padding: 20px;
-    border: 1px solid #b3b7b5;
-    border-radius: 5%;
+    border: 1px solid $accent;
+    border-radius: 8px;
     width: 180px;
     position: relative;
     &::after {
@@ -487,7 +482,7 @@
       width: 22px;
       height: 9px;
       right: 20px;
-      top: 25px;
+      top: 32px;
     }
   }
 }
@@ -708,7 +703,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #243f4d;
+    color: $accent2;
     font-size: 22px;
     letter-spacing: 1.5px;
     width: 100%;
@@ -719,8 +714,7 @@
 
 .terms {
   padding-top: 55px;
-  color: #243f4d;
-  font-size: 16px;
+  color: $accent2;
   &__title {
     margin: 60px 0 15px;
     @extend %dmsans-700;
@@ -741,7 +735,7 @@
 
 .about {
   padding-top: 120px;
-  color: #243f4d;
+  color: $accent2;
   &__exp {
     display: flex;
     justify-content: space-between;
@@ -766,7 +760,6 @@
   }
   &__exp-box {
     margin-left: 30px;
-    font-size: 16px;
     span {
       margin-bottom: 5px;
     }
@@ -778,7 +771,6 @@
     margin-bottom: 35px;
   }
   &__exp-text {
-    font-size: 16px;
     padding-bottom: 60px;
     border-bottom: 1px solid #e6eaf0;
   }
@@ -789,12 +781,11 @@
   }
   &__exp-item {
     color: $default;
-    font-size: 16px;
     padding: 0 25px 0 90px;
     position: relative;
     span {
       display: block;
-      color: #243f4d;
+      color: $accent2;
       @extend %dmsans-700;
       font-size: 36px;
       margin-bottom: 15px;
@@ -890,12 +881,10 @@
     width: 100%;
   }
   &__team-text {
-    font-size: 16px;
     margin-bottom: 40px;
   }
   &__team-btn {
     color: #fff;
-    font-size: 16px;
     letter-spacing: 1.5px;
     background-color: #a3bbc8;
     height: 60px;
@@ -946,9 +935,6 @@
     font-size: 22px;
     @extend %dmsans-700;
     margin-bottom: 10px;
-  }
-  &__team-position {
-    font-size: 16px;
   }
   &__team-link {
     margin-right: 15px;
@@ -1002,8 +988,6 @@
     margin-bottom: 25px;
   }
   &__info-text {
-    font-size: 16px;
-    line-height: 30px;
     span {
       display: block;
     }
@@ -1038,12 +1022,12 @@
     text-transform: uppercase;
     background-position: right top;
     background-repeat: no-repeat;
+    background-origin: content-box;
+    outline-color: $accent;
   }
   &__form-input {
     max-width: 300px;
     height: 50px;
-    background-position-x: 240px;
-    background-position-y: 20px;
   }
   &__form-input--name {
     background-image: url("../images/icons/user-form.svg");
@@ -1056,8 +1040,6 @@
     margin-bottom: 30px;
     height: 170px;
     background-image: url("../images/icons/message-form.svg");
-    background-position-x: 535px;
-    background-position-y: 15px;
   }
   &__form-btn {
     border: none;
@@ -1096,13 +1078,11 @@
     margin: 40px 0;
   }
   &__item-text {
-    font-size: 16px;
     color: $accent;
     margin-bottom: 40px;
   }
   &__item-link {
     display: block;
-    font-size: 16px;
     color: #a3bbc8;
     padding: 20px;
     border: 2px solid #a3bbc8;
@@ -1116,7 +1096,7 @@
       width: 22px;
       height: 9px;
       right: 20px;
-      top: 28px;
+      top: 30px;
     }
   }
 }
@@ -1129,7 +1109,7 @@
   text-align: center;
   padding: 20px 0;
   position: relative;
-  margin-top: -64px;
+  margin-top: -70px;
   &__date {
     margin-right: 20px;
     padding-left: 20px;
@@ -1203,15 +1183,14 @@
     height: 40px;
     span {
       display: block;
-      font-size: 16px;
-      color: #243f4d;
+      color: $accent2;
     }
   }
 }
 
 .filter {
   &__title {
-    color: #243f4d;
+    color: $accent2;
     text-transform: uppercase;
     font-size: 18px;
     @extend %dmsans-700;
@@ -1255,6 +1234,160 @@
       bottom: 1px;
     }
   }
+}
+
+.blog-one {
+  color: $accent2;
+  &__text {
+    h4 {
+      font-size: 36px;
+      color: $title;
+      margin-top: 40px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    p {
+      margin-top: 25px;
+    }
+    blockquote {
+      background-color: #edf1f4;
+      max-width: 820px;
+      width: 100%;
+      padding: 25px 90px 25px 35px;
+      border-left: 7px solid #a3bbc8;
+      margin: 40px 0;
+      span {
+        display: block;
+        padding-left: 45px;
+        margin-top: 20px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 4px;
+          background-color: #a3bbc8;
+          left: 0;
+          bottom: 14px;
+        }
+      }
+    }
+  }
+  &__left-img {
+    float: left;
+    margin: 0 30px 5px 0;
+  }
+  &__right-img {
+    float: right;
+    margin: 0 0 30px 5px;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+  &__author-img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__author-name {
+    font-size: 18px;
+    @extend %dmsans-700;
+    color: $title;
+  }
+  &__box {
+    margin: 70px 0;
+    padding: 30px 0;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__tags {
+    margin-bottom: 15px;
+  }
+  &__tags,
+  &__share {
+    span {
+      color: $title;
+      font-size: 18px;
+      @extend %dmsans-700;
+      margin-right: 20px;
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 30px;
+  &__title {
+    margin-bottom: 50px;
+    font-size: 24px;
+    @extend %dmsans-700;
+    color: $accent;
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__content-name {
+    font-size: 18px;
+    @extend %dmsans-700;
+  }
+  &__content-date {
+    color: $default;
+  }
+  &__content-text {
+    margin-bottom: 20px;
+  }
+  &__content-reply {
+    padding-right: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/icons/arrow-blog.svg");
+      width: 22px;
+      height: 9px;
+      right: -3px;
+      top: 6px;
+    }
+  }
+  &__form {
+    max-width: 100%;
+  }
+  &__form-title {
+    margin: 100px 0 45px;
+    font-size: 24px;
+    @extend %dmsans-700;
+    color: $accent;
+  }
+  &__form-input {
+    max-width: 100%;
+  }
+}
+
+.comment--reply {
+  padding: 30px 0 30px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  width: 700px;
+  margin: 0 0 30px auto;
 }
 
 @import "media";
